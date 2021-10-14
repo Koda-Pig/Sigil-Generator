@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <link rel='icon' type='image/svg+xml' href='./favicon.svg' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <title>Sigil Generator</title>
+    </head>
+    <body>
+        <main>
+            <div class='container flex'>
+                <div class='nav'>
+                    <h1>Sigil Generator</h1>
+                    <button id='themeSwitchButton' class='themeSwitch'>
+                        <img src='https://joshkoter.com/wp-content/uploads/2021/09/themeSwitch.png' alt='switch theme' title='switch theme'>
+                    </button>
+                </div>
+                <label for='input'>Enter in your wish or desire. Keep it concise and do NOT use negatives.</label>
+                <input type='text' id='input'>
+                <input type='submit' id='submit' value='generate'>
+                <p id='output'></p>
+            </div>
+        </main>
+        <script type='module' src='./main.js'></script>
+    </body>
+</html>
