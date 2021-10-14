@@ -35,7 +35,7 @@ function genSigil() {
     var userInput = document.getElementById('input').value.split('');
     var n = userInput.length;
     var removedDuplicates = removeDuplicate(userInput, n);
-
+    var finalString = removedDuplicates;
 
 
     // this doesn't work yet.
@@ -90,26 +90,23 @@ function genSigil() {
     //     }
 
 
-    var removeThese = [' ', 'a', 'e', 'i', 'o', 'u'];
-    
-    function removeVowelsAndSpaces(input, remove) {
-
-        var index = 0;
-        for (var i = 0; i < input.length; i++) {
-            var j;
-            for (j = 0; j < i; j++) {
-                if (input[i] == remove[j]) {
-                    input.replace(input[i],'');
-                }
-            }
-            if (j == i) {
-                input[index++] = input[i];
-            }
-        }
-        return input;
-    }
-
-    var finalString = removeVowelsAndSpaces(removedDuplicates,removeThese);
+    // var removeThese = [' ', 'a', 'e', 'i', 'o', 'u'];
+    // function removeVowelsAndSpaces(input, remove) {
+    //     var index = 0;
+    //     for (var i = 0; i < input.length; i++) {
+    //         var j;
+    //         for (j = 0; j < i; j++) {
+    //             if (input[i] == remove[j]) {
+    //                 input.replace(input[i],'');
+    //             }
+    //         }
+    //         if (j == i) {
+    //             input[index++] = input[i];
+    //         }
+    //     }
+    //     return input;
+    // }
+    // var finalString = removeVowelsAndSpaces(removedDuplicates,removeThese);
 
 
         output.innerHTML = finalString;
