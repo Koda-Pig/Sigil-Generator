@@ -138,7 +138,14 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: var(--darkest);
 }
-
+#output {
+    font-size: 2em;
+}
+#description {
+    font-size: 0.9em;
+    font-style: italic;
+    color:var(--darkest);
+}
 
 
 /* dark mode */
