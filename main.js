@@ -38,76 +38,22 @@ function genSigil() {
     var finalString = removedDuplicates;
 
 
-    // this doesn't work yet.
-    /* the logic is:
-    if removedDuplicates contains:  ' ', 'a', 'e', 'i', 'o', 'u'
-    replace said with ''
-    return new string.
-    */
+    function removeDuplicates(input) {
+        let disallow = [' ', 'a', 'e', 'i', 'o', 'u'];
+        let stringFromArray = input.split('');
 
-    // function removeVowelsAndSpaces() {
-    //     for (k = 0; k < removedDuplicates.length; k++) {
-    //         let removeThese = [' ', 'a', 'e', 'i', 'o', 'u'];
-    //         return removedDuplicates.replace(removeThese[k],'');
-    //     }
-    // }
-        
-    // function removeVowelsAndSpaces() {
-    //     var removeThese = [' ', 'a', 'e', 'i', 'o', 'u'];
-    //     for (i = 0; i < removedDuplicates.length; i++) {
-    //         if (removedDuplicates )
-    //         removedDuplicates.replace(removeThese[i],'');
-    //     }
-    // }
+        for (let i = 0; i < disallow.length; i++) {
+            for (let j = 0; j < stringFromArray.length; j++) {
+                if (disallow[i] == stringFromArray[j]) {
+                    stringFromArray.splice(j,1);
+                }
+            }
+        }
+        finalString = stringFromArray.join('');
+    }
+    removeDuplicates(removedDuplicates);
 
 
-    // function checker(value) {
-    //     var removeThese = [' ', 'a', 'e', 'i', 'o', 'u'];
-      
-    //     for (var i = 0; i < removeThese.length; i++) {
-    //       if (value.indexOf(removeThese[i]) > -1) {
-    //         return false;
-    //       }
-    //     }
-    //     return true;
-    //   }
-      
-    //   removedDuplicates = removeThese.filter(checker);
 
-    // let finalString = removedDuplicates;
-    // for (let i = 0; i < removedDuplicates.length; i++) {
-    //     if (
-    //         finalString[i] === ' ' ||
-    //         finalString[i] === 'a' ||
-    //         finalString[i] === 'e' ||
-    //         finalString[i] === 'i' ||
-    //         finalString[i] === 'o' ||
-    //         finalString[i] === 'u'
-    //         )
-    //         {
-    //             finalString.replace(finalString[i],'');
-    //         }
-    //     }
-
-
-    // var removeThese = [' ', 'a', 'e', 'i', 'o', 'u'];
-    // function removeVowelsAndSpaces(input, remove) {
-    //     var index = 0;
-    //     for (var i = 0; i < input.length; i++) {
-    //         var j;
-    //         for (j = 0; j < i; j++) {
-    //             if (input[i] == remove[j]) {
-    //                 input.replace(input[i],'');
-    //             }
-    //         }
-    //         if (j == i) {
-    //             input[index++] = input[i];
-    //         }
-    //     }
-    //     return input;
-    // }
-    // var finalString = removeVowelsAndSpaces(removedDuplicates,removeThese);
-
-
-        output.innerHTML = finalString;
+    output.innerHTML = finalString;
 }
