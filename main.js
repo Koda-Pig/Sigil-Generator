@@ -8,17 +8,14 @@ function switchTheme() {
     element.classList.toggle('dark-mode');
 }
 
-
 // sigil generator
 const genSigilBtn = document.getElementById('genSigilBtn');
 let output = document.getElementById('output');
 let description = document.getElementById('description');
 genSigilBtn.addEventListener('click', genSigil);
 
-
 function genSigil() {
     
-
     let userInput = document.getElementById('input').value.split('');
 
     if (userInput == undefined || userInput == '') {
@@ -42,9 +39,6 @@ function genSigil() {
             }
             return userInput.join("").slice(userInput, index);
         }
-        
-
-
 
         function removeDuplicates(input) {
             let disallow = [' ', 'a', 'e', 'i', 'o', 'u'];
