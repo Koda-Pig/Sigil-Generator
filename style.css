@@ -138,6 +138,13 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: var(--darkest);
 }
+p#info {
+    text-align: center;
+    padding:0em 10em;
+}
+#info em {
+    color:var(--darkest);
+}
 #output {
     font-size: 2em;
 }
@@ -184,10 +191,12 @@ input[type=submit]:hover {
 .dark-mode p {
     color:var(--white);
 }
+.dark-mode #info strong {
+    color:var(--white);
+}
 input[type=submit] {
     background: var(--darkest);
     color: var(--darkergray);
-
 }
 input[type=submit]:hover {
     background-color: var(--light);
